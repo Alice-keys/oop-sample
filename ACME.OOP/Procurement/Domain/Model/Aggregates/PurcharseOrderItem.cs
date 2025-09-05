@@ -11,7 +11,7 @@ namespace ACME.OOP.Procurement.Domain.Model.Aggregates;
 ///
 /// <exception cref="ArgumentException">Thrown when any of the parameters are invalid.</exception>
 /// <exception cref="InvalidOperationException">Thrown when attempting to calculate the total for an item with invalid state.</exception>
-public class PurchaseOrderItem(ProductId productId, int quantity, Money unitPrice)
+public class PurcharseOrderItem(ProductId productId, int quantity, Money unitPrice)
 {
     public ProductId ProductId { get; } = productId ?? throw new ArgumentException(nameof(ProductId));
     public int Quantity { get; } = quantity > 0 ? quantity : throw new ArgumentException("Quantity must be greater than zero.", nameof(quantity));
